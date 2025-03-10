@@ -38,17 +38,11 @@ class OrangeHRMPage {
   }
 
   // Print result for Records Found
-  async printRecordsFound() {
-    /*const records = await this.page.locator(`${locators.recordsFound} tr`).allTextContents();
-    console.log('Records Found:');
-    records.forEach((record, index) => {
-      if (index > 0) { // Skip the header row
-        const [username, userRole, employeeName] = record.split('\n');
-        console.log(`Username: ${username}, User Role: ${userRole}, Employee Name: ${employeeName}`);
-      }
-    });*/
-// Wait for the table rows to be present and visible
- // Wait for the table rows to be present and visible
+  async printRecordsFound() { 
+
+ // Wait for the rows to be visible
+ console.log('Waiting for rows to appear...');
+ await this.page.waitForSelector(`${locators.recordsFound} .oxd-table-body .oxd-table-row`, { state: 'visible', timeout: 30000 });
  const rows = await this.page.locator(`${locators.recordsFound} .oxd-table-body .oxd-table-row`);
 
  const rowCount = await rows.count();
