@@ -1,0 +1,23 @@
+{
+  "name": "codding_challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js src/test/functional/features",
+    "test_Load": "k6 run src/test/LoadTesting/loadTest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.9",
+    "allure-commandline": "^2.33.0",
+    "allure-playwright": "^3.2.0",
+    "@types/k6": "^0.54.2",
+    "k6": "^0.0.0"
+  }
+}

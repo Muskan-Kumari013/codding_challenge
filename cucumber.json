@@ -1,0 +1,20 @@
+{
+    "default":{
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "paths": [
+            "src/test/functional/features/*.feature"
+        ],
+        "dryRun": false,
+        "require": [
+            "src/test/functional/steps/*.js",
+            "src/test/functional/hooks/hooks.js"
+        ],
+          "format": [
+            "progress-bar",
+            "html:results/cucumber-report.html"
+          ],
+          "parallel": 1
+    }
+}

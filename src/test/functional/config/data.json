@@ -1,0 +1,31 @@
+{
+    "boardgameSearch": {
+      "title": "Harry Potter and the Sorcerer's Stone: Trivia Game",
+      "yearPublishedMin": "1999",
+      "yearPublishedMax": "2000",
+      "minPlayingTime": "15",
+      "maxPlayingTime": "90"
+    },
+    "signupForm": {
+      "title": "Miss",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@test.com",
+      "phone": "555-5555",
+      "password": "password",
+      "confirmPassword": "password",
+      "country": "United States"
+    },
+    "cupcakeIpsum": {
+      "url": "http://www.cupcakeipsum.com",
+      "title": "Cupcake Ipsum - Sugar-coated Lorem Ipsum Generator",
+      "paragraphs": "5",
+      "short": "short",
+      "startWithCupcake": true
+    },
+    "orangeHRM": {
+      "username": "Admin",
+      "password": "admin123"
+    }
+  }
+  

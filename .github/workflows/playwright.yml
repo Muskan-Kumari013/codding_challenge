@@ -1,0 +1,37 @@
+name: Playwright Test Automation
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: windows-latest  # Use the latest version of Windows (or Ubuntu if you prefer)
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright UI tests
+      run: npm run test
+
+    - uses: actions/upload-artifact@v4
+      if: always()  # Upload the artifact even if the tests fail
+      with:
+        name: cucumber-ui-report
+        path: results/cucumber-report.html
+        retention-days: 2
+
