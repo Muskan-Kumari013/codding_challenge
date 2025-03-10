@@ -1,6 +1,6 @@
 Feature: Board Game Search
 
-  Scenario: Searching for "Harry Potter and the Sorcerer's Stone Trivia Game"
+  Scenario: Searching for Harry Potter and the Sorcerer's Stone Trivia Game
   Given I am on the boardgame search page
   When I fill in the search form with valid details
   And I submit the search
